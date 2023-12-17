@@ -67,16 +67,8 @@ class ContractController extends Controller
             'name'=>'required',
             'phone'=>'required',
             'email'=>'required',
-            'company_type'=>'required',
             'commercial_number'=>'required',
-            'tax_number'=>'required',
             'address'=>'required',
-            'city'=>'required',
-            'building_number'=>'required',
-            'street_name'=>'required',
-            'second_number'=>'required',
-            'district'=>'required',
-            'zip_code'=>'required',
             'indoor_cameras'=>'required',
             'outdoor_cameras'=>'required',
             'storage_device'=>'required',
@@ -86,8 +78,10 @@ class ContractController extends Controller
             'contract_date'=>'required',
             'expiry_date'=>'required',
             'contract_number'=>'required',
-            'paid_amount'=>'nullable',
-            'discount'=>'nullable'
+            'price'=>'nullable',
+            'vat'=>'nullable',
+            'discount'=>'nullable',
+            'total_price'=>'nullable',
         ]);
 
         return Contract::create($form_fields);
@@ -119,16 +113,8 @@ class ContractController extends Controller
             'name'=>'required',
             'phone'=>'required',
             'email'=>'required',
-            'company_type'=>'required',
             'commercial_number'=>'required',
-            'tax_number'=>'required',
             'address'=>'required',
-            'city'=>'required',
-            'building_number'=>'required',
-            'street_name'=>'required',
-            'second_number'=>'required',
-            'district'=>'required',
-            'zip_code'=>'required',
             'indoor_cameras'=>'required',
             'outdoor_cameras'=>'required',
             'storage_device'=>'required',
@@ -138,8 +124,10 @@ class ContractController extends Controller
             'contract_date'=>'required',
             'expiry_date'=>'required',
             'contract_number'=>'required',
-            'paid_amount'=>'nullable',
-            'discount'=>'nullable'
+            'price'=>'nullable',
+            'vat'=>'nullable',
+            'discount'=>'nullable',
+            'total_price'=>'nullable',
         ]);
 
         $contract::where('id', $id)->update($form_fields);
